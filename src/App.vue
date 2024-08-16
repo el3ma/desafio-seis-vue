@@ -111,6 +111,11 @@ export default {
 #app {
     font-family: 'Roboto', sans-serif;
 }
+body{
+    background-image: url(./assets/peakpx.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
 .imgLogo {
     width: 30vw;

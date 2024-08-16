@@ -1,6 +1,6 @@
 <template>
     <div class="CardPokemon text-center">
-      <div class=" m-3 p-2 border-primary-subtle" style="width: 18rem">
+      <div class=" m-3 p-5 border border-warning rounded" style="width: 18rem">
         <img :src="imgPoke" class="card-img-top imgPoke" :class="{visible:!mostrar}"  draggable="false"/>
         <div class="card-body">
           <div v-if="mostrar">

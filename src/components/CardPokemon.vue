@@ -28,19 +28,18 @@ export default {
     props: {
         imgPoke: String,
         nombrePoke: String,
-        
+        mostrar: Boolean
     },
     data() {
         return {
             respuestaPoke: '',
-            mostrar: false
         }
     },
     methods: {
-        enviarPoke: function () {
+      enviarPoke: function () {
             if(this.nombrePoke === this.respuestaPoke){
-                this.$emit('descubrir')
-                this.mostrar = !this.mostrar
+                this.$emit('descubrir') // Notifica al padre para descubrir el Pokémon
+                this.respuestaPoke = ''
             }else{
                 alert(`Ups, te haz equivocado, aquí tienes una pista: ${this.nombrePoke.charAt(0)}...`)
             }
@@ -55,8 +54,12 @@ export default {
 <style scoped>
 .imgPoke{
     max-height: 100px;
+    filter: drop-shadow(0 0 0.75rem rgb(48, 46, 47));
 }
 .visible{
     filter: blur(5px) grayscale(100%);
+}
+.card-title{
+  padding: 38px 0;
 }
 </style>
